@@ -1,0 +1,46 @@
+<html>
+<head>
+	<title>Language Identification Application</title>
+	<link rel="stylesheet" href="/static/style.css">
+</head>
+
+	<body>
+		<div class="container">
+			<div class="container--form">
+					<h1 class="heading--main">
+							NaijLang
+							
+						</h1>
+						<p class="info">
+								
+									This application identifies the language of a written text. It covers major and minor Nigerian Languages such as Efik, Yoruba, Igbo, Isoko and Hausa Languages. Other Nigerian Languages will be included soon.
+							
+						</p>
+					
+						<form action="/" class="container__form" method="post">
+							
+								<label for="user_input">
+									 Enter A Text Here and Discover the Language
+								</label>
+								<input class="input" type="text" name='user_input' placeholder="Type text from available languages" size = "80" value="{{ user_value }}">
+								<input class="btn" type="submit" value="Submit">
+
+
+								<div class="result-pane">
+								{% if result %}
+								{{result}}
+								{% endif %}
+					
+								</div>
+							
+			</div>
+				
+		</div>
+		
+    
+
+	
+	</body>
+
+
+</html>
